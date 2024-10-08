@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Bottle from "../Bottle/Bottle"
 import './Bottles.css'
+import { addToLS } from "../../utilites/localStorage"
 
 
 export default function Bottles() {
@@ -19,6 +20,7 @@ export default function Bottles() {
     // console.log(bottle)
     const newCart=[...cart,bottle]
     setCart(newCart)
+    addToLS(bottle.id)
   }
   return (
     <>
