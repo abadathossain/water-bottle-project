@@ -1,6 +1,6 @@
 import './Bottle.css'
 
-export default function Bottle({bottle}) {
+export default function Bottle({bottle, handleAddToCart}) {
     // console.log(bottle)
     const {name,img,price}=bottle
   return (
@@ -9,7 +9,7 @@ export default function Bottle({bottle}) {
         <h3>Bottle Nmae:{name}</h3>
         <img className='bottle-img' src={img} alt="" />
         <p>Bottle Price:{price}</p>
-        <button>Purchased</button>
+        <button onClick={()=>handleAddToCart(bottle)}>Purchased</button>
        
     </div>
    
